@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #17202A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Cambria";
+}
+
+.parent::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: grey;
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    z-index: -1;
+    transition: background 1s;
+}
+
+.parent::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: grey;
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+    transition: background 1s;
+}
+
+.parent {
+    position: relative;
+    width: 400px;
+    /* height: 200px; */
+    background: #1B2631;
+    border: 2px solid #20b2aa;
+    border-radius: 5px;
+    /* overflow-y: hidden; */
+}
+
+.img {
+    width: 200px;
+    height: 150px;
+    margin: -50px auto;
+}
+
+.img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.content h1 {
+    color: #20b2aa;
+}
+
+.content span {
+    color: #fff;
+}
+
+.parent .reviews {
+    height: 0;
+    overflow: hidden;
+    margin: 0 20px;
+    transition: height 1s;
+}
+
+.parent .reviews .first-review {
+    display: flex;
+    justify-content: space-around;
+}
+
+.parent .reviews .first-review h3 {
+    color: #20b2aa;
+}
+
+.parent .reviews .first-review span {
+    color: #fff;
+}
+
+.parent .reviews .button {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.parent .reviews .button > button {
+    padding: 10px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.parent .reviews .button > button:first-child {
+    background: #20b2aa;
+    color: #fff;
+}
+
+.parent .reviews .button > button:last-child {
+    background-color: #fff;
+}
+
+.parent:hover .reviews {
+    height: 150px;
+}
+
+.parent:hover::before {
+    background: #20b2aa;
+}
+
+.parent:hover::after {
+    background: #fff;
+}
+
+/* .relative {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #000000;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.span_parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #1B2631;
+    margin: 5px;
+    border-radius: 5px;
+} */
+
+/* 212F3D
+1B2631
+17202A
+
+
+*/
